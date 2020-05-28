@@ -1,0 +1,39 @@
+{include file="public/header" /}
+    <div class="content">    <div class="webaddress" style="width: auto;">
+        当前位置：<a href="{:url('index/news')}">首页</a><span class="ficon icon-uniE6E8"></span><a href="{:url('login/login')}">登录</a>
+    </div>
+        <div class="mid logtab">
+            <div class="col5">
+                <p><img src="__STATIC__/pic/logimg1.png" class="w100"></p>
+            </div>
+            <div class="col5">
+                <form class="logform">
+                    <p id="logusername">
+                        <input type="text" name="username" value="" placeholder="账号">
+                        <span>ddddd</span>
+                    </p>
+                    <p id="logpasswd">
+                        <input type="password" name="password" value="" placeholder="密码">
+                        <span>dddd</span>
+                    </p>
+                    <p id="loglong">
+                        <input type="checkbox" name="longlog">七天内免登录
+                        <a href="#">忘记密码</a>
+                    </p>
+                    <p id="logsubmit">
+                        <a href="javascript:" id="logbtn" class="logbtn">登录</a>
+                        <a href="{:url('register/reg')}" class="logbtn" target="__blank">注册</a>
+                    </p><div class="clear"></div>
+                    <p></p>
+                    <p id="logother">
+                        <span>第三方登录：</span><a href="#" class="indexlogicon"><img src="__STATIC__/pic/qq.png" class="w100"></a><a href="#" target="__blank" class="indexlogicon"><img src="__STATIC__/pic/micromsg.png" class="w100"></a>
+                    </p>
+                </form>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="mid">
+            <p><img src="__STATIC__/pic/logimg2.png" class="w100"></p>
+        </div>
+    </div>
+{include file="public/footer" /}

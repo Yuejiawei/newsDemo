@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="IE=7" http-equiv="X-UA-Compatible">
+    <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+    <title>华夏检验检测网</title>
+    <link rel="shortcut icon" href="http://www.huaxiajianyan.com/hx_favicon.ico">
+    <link href="__STATIC__/css/icomoon_style.css" rel="stylesheet" type="text/css">
+    <link href="__STATIC__/css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="__STATIC__/css/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="__STATIC__/css/sitelogo.css" rel="stylesheet" type="text/css">
+    <link href="__STATIC__/css/cropper.min.css" rel="stylesheet" type="text/css">
+    <script src="https://hm.baidu.com/hm.js?8ca1a1866b223c39ace948376721463c"></script>
+    <link href="__STATIC__/css/avatar.css" rel="stylesheet" type="text/css">
+    <link href="__STATIC__/css/style.css" rel="stylesheet" type="text/css">
+    <script src="__STATIC__/js/jquery-2.1.4.js"></script>
+    <script src="__STATIC__/js/jquery.SuperSlide.2.1.js"></script>
+    <script type="text/javascript" src="//trusted.shuidi.cn/trusted.js?id=2514&amp;jump=0&amp;style=1"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8ca1a1866b223c39ace948376721463c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+<!--<div style="width: 100%; font-size: 14px; position: relative;">-->
+    <!--<div id="trusted_container" style="width: 100%;height:91px; left: 0;top: 0;z-index: 100000000; overflow:hidden"><iframe id="trusted_iframe" style="width: 100%; overflow:hidden;margin:0;padding: 0;position: inherit;height: 91px;" src="//trusted.shuidi.cn/?did=2514&amp;jump=0&amp;mobile=0" frameborder="false"></iframe></div><div style="position:absolute;top: 0;right: 0px;z-index: 100000001;"><img id="trusted_hide_image" onclick="hideTrustedFrame(this);" style="width:38px;height:79px;" src="//staticcdn.shuidi.cn/shuidi/images/trusted-web3_01.png"><img id="trusted_show_image" onclick="showTrustedFrame(this);" style="display: none;width:38px;height:40px;" src="//staticcdn.shuidi.cn/shuidi/images/trusted-web4_01.png"></div>-->
+<!--</div>-->
+<div class="wrap regtab" style="min-width: 1500px;min-height: 780px;">
+    <div class="reginner">
+        <div class="regrst">
+            <i></i>
+            <p id="regname"></p>
+            <em>欢迎您注册华夏检验检测网</em>
+            <em>请至会员中心完善信息</em>
+            <p id="regok_btn">
+                <a href="{:url('login/login')}">前往登录</a>
+                <a href="{:url('index/news')}">返回首页</a>
+            </p>
+        </div>
+        <div class="regstep2">
+            <h4 class="reglogo" style="text-align: center;">
+                <span>欢迎注册华夏检验检测网</span>
+            </h4>
+            <div class="qyregtab">
+                <div class="qyregform">
+                    <form id="reg_form">
+                        <p id="username">
+                            <b><em>*</em>用户名：</b>
+                            <input type="text" placeholder="20个字符，只能使用数字、英文、-/_符号" value="" name="username">
+                            <span></span>
+                        </p>
+                        <p id="email">
+                            <b><em>*</em>联系邮箱：</b>
+                            <input type="text" placeholder="请输入常用邮箱" value="" name="email">
+                            <span></span>
+                        </p>
+                        <p>
+                            <b><em>*</em>验证码：</b>
+                            <input type="text" placeholder="请输入邮箱验证码" value="" name="msgno" id="msgno"><span id="getmsgno">发送验证码</span>
+                        </p>
+
+
+                        <p id="password">
+                            <b><em>*</em>密码：</b>
+                            <input type="password" placeholder="长度为6-16个字符" value="" name="password" maxlength="16">
+                            <span></span>
+                        </p><div id="regpasswdtips">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                        <div class="clear"></div>
+                        <p></p>
+                        <p id="repassword">
+                            <b><em>*</em>确认密码：</b>
+                            <input type="password" placeholder="请确认账户密码" value="" name="repassword">
+                            <span></span>
+                        </p>
+                        <p id="mobilephone">
+                            <b><em>*</em>手机号码：</b>
+                            <select name="areano">
+                                <option value="0">中国大陆+86</option>
+                                <option value="1">中国台湾地区+886</option>
+                                <option value="2">中国香港+852</option>
+                                <option value="3">马来西亚+60</option>
+                                <option value="4">新加坡+65</option>
+                                <option value="5">日本+81</option>
+                                <option value="6">韩国+82</option>
+                                <option value="7">美国+1</option>
+                                <option value="8">加拿大+1</option>
+                                <option value="9">澳大利亚+61</option>
+                                <option value="10">新西兰+64</option>
+                                <option value="11">阿尔巴尼亚+355</option>
+                                <option value="12">阿根廷+54</option>
+                                <option value="13">阿联酋+971</option>
+                                <option value="14">阿曼+968</option>
+                                <option value="15">阿塞拜疆+994</option>
+                                <option value="16">爱尔兰+353</option>
+                                <option value="17">埃及+20</option>
+                                <option value="18">爱沙尼亚+372</option>
+                                <option value="19">安哥拉+244</option>
+                                <option value="20">奥地利+43</option>
+                                <option value="21">中国澳门+853</option>
+                                <option value="22">巴布亚新几内亚+675</option>
+                                <option value="23">巴哈马+</option>
+                                <option value="24">巴勒斯坦+970</option>
+                                <option value="25">巴林+973</option>
+                                <option value="26">巴拿马+507</option>
+                                <option value="27">巴西+55</option>
+                                <option value="28">白俄罗斯+375</option>
+                                <option value="29">保加利亚+359</option>
+                                <option value="30">贝宁+229</option>
+                                <option value="31">比利时+32</option>
+                                <option value="32">秘鲁+51</option>
+                                <option value="33">波兰+48</option>
+                                <option value="34">玻利维亚+591</option>
+                                <option value="35">伯利兹+501</option>
+                                <option value="36">布基纳法索+226</option>
+                                <option value="37">赤道几内亚+240</option>
+                                <option value="38">丹麦+45</option>
+                                <option value="39">德国+49</option>
+                                <option value="40">多哥+228</option>
+                                <option value="41">俄罗斯+7</option>
+                                <option value="42">法国+33</option>
+                                <option value="43">菲律宾+63</option>
+                                <option value="44">芬兰+358</option>
+                                <option value="45">弗得角+238</option>
+                                <option value="46">冈比亚+220</option>
+                                <option value="47">格林纳达+</option>
+                                <option value="48">格鲁吉亚+995</option>
+                                <option value="49">哥伦比亚+57</option>
+                                <option value="50">哥斯达黎加+506</option>
+                                <option value="51">圭亚那+592</option>
+                                <option value="52">荷兰+31</option>
+                                <option value="53">洪都拉斯+504</option>
+                                <option value="54">吉布提+253</option>
+                                <option value="55">吉尔吉斯斯坦+996</option>
+                                <option value="56">几内亚+224</option>
+                                <option value="57">几内亚比绍+245</option>
+                                <option value="58">加蓬+241</option>
+                                <option value="59">柬埔寨+855</option>
+                                <option value="60">津巴布韦+263</option>
+                                <option value="61">喀麦隆+237</option>
+                                <option value="62">卡塔尔+974</option>
+                                <option value="63">开曼群岛+</option>
+                                <option value="64">克罗地亚+385</option>
+                                <option value="65">科摩罗+269</option>
+                                <option value="66">科威特+965</option>
+                                <option value="67">肯尼亚+254</option>
+                                <option value="68">拉脱维亚+371</option>
+                                <option value="69">拉索托+266</option>
+                                <option value="70">立陶宛+370</option>
+                                <option value="71">卢森堡+352</option>
+                                <option value="72">卢旺达+250</option>
+                                <option value="73">罗马尼亚+40</option>
+                                <option value="74">马达加斯加+261</option>
+                                <option value="75">马尔代夫+960</option>
+                                <option value="76">马拉维+365</option>
+                                <option value="77">马里+223</option>
+                                <option value="78">毛里求斯+230</option>
+                                <option value="79">毛里塔尼亚+222</option>
+                                <option value="80">蒙古+976</option>
+                                <option value="81">摩尔多瓦+373</option>
+                                <option value="82">摩洛哥+212</option>
+                                <option value="83">莫桑比克+258</option>
+                                <option value="84">墨西哥+52</option>
+                                <option value="85">纳米比亚+264</option>
+                                <option value="86">南非+27</option>
+                                <option value="87">尼加拉瓜+505</option>
+                                <option value="88">尼日尔+227</option>
+                                <option value="89">尼日利亚+234</option>
+                                <option value="90">挪威+47</option>
+                                <option value="91">葡萄牙+351</option>
+                                <option value="92">瑞典+46</option>
+                                <option value="93">瑞士+41</option>
+                                <option value="94">塞尔瓦多+503</option>
+                                <option value="95">塞尔维亚+381</option>
+                                <option value="96">塞拉利昂+232</option>
+                                <option value="97">塞内加尔+221</option>
+                                <option value="98">塞浦路斯+357</option>
+                                <option value="99">塞舌尔+248</option>
+                                <option value="100">沙特阿拉伯+966</option>
+                                <option value="101">斯里兰卡+94</option>
+                                <option value="102">斯洛伐克+421</option>
+                                <option value="103">斯洛文尼亚+386</option>
+                                <option value="104">斯威士兰+268</option>
+                                <option value="105">苏里南+597</option>
+                                <option value="106">塔吉克斯坦+992</option>
+                                <option value="107">泰国+66</option>
+                                <option value="108">坦桑尼亚+255</option>
+                                <option value="109">特立尼达和多巴哥+</option>
+                                <option value="110">土耳其+90</option>
+                                <option value="111">土库曼斯坦+993</option>
+                                <option value="112">突尼斯+216</option>
+                                <option value="113">危地马拉+502</option>
+                                <option value="114">委内瑞拉+58</option>
+                                <option value="115">文莱+673</option>
+                                <option value="116">乌干达+256</option>
+                                <option value="117">乌克兰+380</option>
+                                <option value="118">乌拉圭+598</option>
+                                <option value="119">乌兹别克斯坦+998</option>
+                                <option value="120">西班牙+34</option>
+                                <option value="121">希腊+30</option>
+                                <option value="122">牙买加+</option>
+                                <option value="123">也门+967</option>
+                                <option value="124">意大利+39</option>
+                                <option value="125">以色列+972</option>
+                                <option value="126">印度+91</option>
+                                <option value="127">印度尼西亚+62</option>
+                                <option value="128">英国+44</option>
+                                <option value="129">英属维京群岛+</option>
+                                <option value="130">约旦+962</option>
+                                <option value="131">越南+84</option>
+                                <option value="132">赞比亚+260</option>
+                                <option value="133">乍得+235</option>
+                                <option value="134">智利+56</option>
+                            </select>
+                            <input type="text" placeholder="每个手机号只能注册一次" value="" class="mininput" name="mobilephone">
+                            <span></span>
+                        </p>
+                        <p id="invitecode">
+                            <b>推荐码：</b>
+                            <input type="text" placeholder="输入推荐码可获取100积分，可不填写" value="" name="invitecode">
+                            <span></span>
+                        </p>
+                        <p><input type="checkbox" value="1" id="haveread">我已阅读并同意<a href="{:url('Register/duty1')}" target="__blank">《华夏检测网用户服务协议》</a>和<a href="{:url('Register/duty2')}" target="__blank">《华夏检验检测网隐私权条款》</a></p>
+                        <input type="hidden" name="regtype" id="regtype" value="email">
+                        <p id="person_reg" class="regsubmit">注册</p>
+                        <p id="gotolog">我已是会员，点此<a href="{:url('login/login')}">登录</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="__STATIC__/js/trusted.js"></script>
+<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=oNp6H79shkE8mWfu6rC2Vz1p0d2DqqLj"></script><script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&amp;ak=oNp6H79shkE8mWfu6rC2Vz1p0d2DqqLj&amp;services=&amp;t=20200327103013"></script>
+<script type="text/javascript" src="__STATIC__/js/swiper.js" charset="utf-8"></script>
+<script src="__STATIC__/js/sweetalert.min.js"></script>
+</script><script type="text/javascript" src="__STATIC__/js/main.js"></script>
+<script src="__STATIC__/js/sweetalert.min.js"></script>
+<!--<div class="mid"><div class="fr"><script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1278763673'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/z_stat.php%3Fid%3D1278763673%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_1278763673"><a href="https://www.cnzz.com/stat/website.php?web_id=1278763673" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="https://icon.cnzz.com/img/pic.gif"></a></span><script src="https://s4.cnzz.com/z_stat.php?id=1278763673&amp;show=pic" type="text/javascript"></script><script src="https://c.cnzz.com/core.php?web_id=1278763673&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script> </div></div>-->
+
+</body></html>

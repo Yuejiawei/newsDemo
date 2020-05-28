@@ -1,0 +1,77 @@
+{include file="public/header" /}
+        <div class="webaddress">
+            当前位置：<a href="{:url('index/news')}">首页</a><span class="ficon icon-uniE6E8"></span><a href="{:url('index/news')}">新闻资讯</a>
+            <a href="javascript:;" id="index_logbtn1" class="addpublic">我要发布</a>
+
+
+        </div>
+
+        <div class="mid">
+            <div class="col7">
+                <ul id="newstopmenu">
+                    <li><a href="#">最新招投标资讯</a></li>
+                    {if $cid == 0}<li  class="active" >{else /}<li>{/if}<a href="{:url('article/more_article',['cid'=>0])}">曝光台</a></li>
+                    {if $cid == 1}<li  class="active" >{else /}<li>{/if}<a href="{:url('article/more_article',['cid'=>1])}">企业公示</a></li>
+                    {if $cid == 2}<li  class="active" >{else /}<li>{/if}<a href="{:url('article/more_article',['cid'=>2])}">文件发布</a></li>
+
+                    {if $cid == 3}<li  class="active" >{else /}<li>{/if}<a href="{:url('article/more_article',['cid'=>3,'label'=>4])}">行业资讯</a></li>
+
+                    {if $cid == 4}<li  class="active" >{else /}<li>{/if}<a href="{:url('article/more_article',['cid'=>4])}">展览会</a></li>
+                </ul>
+                {if $cid == 3}
+                <dl id="newsassortlist">
+                    <a href="{:url('article/more_article',['cid'=>3,'label'=>4])}"><dd id="nal_1" {if $label == 4 } class="active"{/if} title="食品与农产品">食品与农产品</dd></a>
+                    <a href="{:url('article/more_article',['cid'=>3,'label'=>2])}"><dd id="nal_2" {if $label == 2 } class="active"{/if} title="轻工与消费品">轻工与消费品</dd></a>
+                    <a href="{:url('article/more_article',['cid'=>3,'label'=>5])}"><dd id="nal_3" {if $label == 5 } class="active"{/if} title="医药与生物化学">医药与生物化学</dd></a>
+                    <a href="{:url('article/more_article',['cid'=>3,'label'=>6])}"><dd id="nal_4" {if $label == 6 } class="active"{/if} title="机械机电">机械机电</dd></a>
+                    <a href="{:url('article/more_article',['cid'=>3,'label'=>7])}"><dd id="nal_5" {if $label == 7 } class="active"{/if} title="交通运输">交通运输</dd></a>
+                    <a href="{:url('article/more_article',['cid'=>3,'label'=>8])}"><dd id="nal_6" {if $label == 8 } class="active"{/if} title="电子电信">电子电信</dd></a>
+                    <a href="{:url('article/more_article',['cid'=>3,'label'=>9])}"><dd id="nal_7" {if $label == 9 } class="active"{/if} title="地矿与石油化工">地矿与石油化工</dd></a>
+                    <a href="{:url('article/more_article',['cid'=>3,'label'=>1])}"><dd id="nal_8" {if $label == 1 } class="active"{/if} title="工程与材料测试">工程与材料测试</dd></a>
+                    <a href="{:url('article/more_article',['cid'=>3,'label'=>3])}"><dd id="nal_9" {if $label == 3 } class="active"{/if} title="健康与环境">健康与环境</dd></a>
+                    <a href="{:url('article/more_article',['cid'=>3,'label'=>10])}"><dd id="nal_10" {if $label == 10 } class="active"{/if} title="特种设备">特种设备</dd></a>
+                    <a href="{:url('article/more_article',['cid'=>3,'label'=>11])}"><dd id="nal_11" {if $label == 11 } class="active"{/if} title="计量检定与校准">计量检定与校准</dd></a>
+                    <a href="{:url('article/more_article',['cid'=>3,'label'=>0])}"><dd id="nal_12" {if $label == 0 } class="active"{/if} title="检验/认证/司法鉴定/其它">检验/认证/司法鉴定/其它</dd></a>
+                </dl>
+                {/if}
+                <ul id="newstotallist">
+                    {volist name="$categoryData" key="key" id="vo" empty="暂时没有数据"}
+                    <li><a href="{:url('article/detail',['id'=>$vo.id])}" target="_blank">{$vo.title}</a></li>
+                    {/volist}
+                </ul>
+            </div>
+            <div class="col3"></div>
+            <div class="clear"></div>
+        </div>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+        <script>
+            wx.config({
+                debug: false,
+                appId: 'wxee49936fdf97beb3',
+                timestamp: 1590629823,
+                nonceStr: 'DgtaEDwLZKZLAzNy',
+                signature: '6a7ffcc012a0de3583d612ce38a721da6c2ee45e',
+                jsApiList: [
+                    'onMenuShareTimeline',
+                    'onMenuShareAppMessage'
+                ]
+            });
+            wx.ready(function(){
+                wx.onMenuShareAppMessage({
+                    title: '',
+                    desc: $('#articlecontent').text(),
+                    link: "",
+                    imgUrl: "http://www.huaxiajianyan.com/image/wx_logo.png",
+                    success: function(res){}
+                });
+                wx.onMenuShareTimeline({
+                    title: '',
+                    desc: $('#articlecontent').text(),
+                    link: "",
+                    imgUrl: "http://www.huaxiajianyan.com/image/wx_logo.png",
+                    success: function(res){}
+                });
+            });
+        </script>
+    </div>
+{include file="public/footer"}

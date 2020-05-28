@@ -1,0 +1,172 @@
+{include file="public/header" /}
+    <div class="content">    <!--飘窗-->
+        <div class="floattab">
+            <p class="floatbtn">
+                注册
+            </p>
+            <div class="regcode">
+                <p><img src="__STATIC__/pic/regcode86.png" class="w100"></p>
+                <p>欢迎微信扫码注册</p>
+            </div>
+        </div>
+        <div class="webaddress">
+            当前位置：<a href="{:url('index/news')}">首页</a><span class="ficon icon-uniE6E8"></span>
+            <a href="{:url('index/news')}">新闻资讯</a>
+            <a href="javascript:;" id="index_logbtn1" class="addpublic">我要发布</a>
+
+
+        </div>
+        <style>
+            img{
+                max-width:756px;
+            }
+        </style>
+        <div class="mid">
+            <div class="col7 articledetails">
+                <h4 id="artTitle" class="artTitle">{$title}</h4>
+                <p class="artiledate"><em>来源：{$source}</em><em>日期：{$time|date="Y-m-d"}</em><em>浏览次数：{$view_count}</em>
+
+                </p>
+                <!--<div class="social-share fr share-component" style="position: absolute;right: 0;" data-sites="qq,weibo,wechat,douban,qzone" data-title="河南省市场监督管理局：车用柴油等27批次产品质量不合格&#45;&#45;新闻资讯" data-image="http://www.huaxiajianyan.com/image/wx_logo.png"><a class="social-share-icon icon-qq" href="http://connect.qq.com/widget/shareqq/index.html?url=http%3A%2F%2Fwww.huaxiajianyan.com%2Fnews.php%3Faid%3D1439&amp;title=%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%EF%BC%9A%E8%BD%A6%E7%94%A8%E6%9F%B4%E6%B2%B9%E7%AD%8927%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC&#45;&#45;%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF&amp;source=%E5%8D%8E%E5%A4%8F%E6%A3%80%E9%AA%8C%E6%A3%80%E6%B5%8B%E7%BD%91&amp;desc=%0A%09%C2%A0%20%C2%A0%20%C2%A0%202020%E5%B9%B45%E6%9C%8821%E6%97%A5%EF%BC%8C%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%E7%BD%91%E7%AB%99%E5%8F%91%E5%B8%83%E5%85%B3%E4%BA%8E27%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC%E6%83%85%E5%86%B5%E7%9A%84%E9%80%9A%E5%91%8A%E3%80%82%E6%8D%AE%E9%80%9A%E5%91%8A%EF%BC%8C%E8%BF%91%E6%9C%9F%EF%BC%8C%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%E5%AE%8C%E6%88%90%E4%BA%86%E8%BD%A6%E7%94%A8%E6%9F%B4%E6%B2%B9%E3%80%81%E8%BD%A6%E7%94%A8%E4%B9%99%E9%86%87%E6%B1%BD%E6%B2%B9%E3%80%81%E7%A0%82%E8%BD%AE%E3%80%81%E8%BD%AE%E8%83%8E%E3%80%81%E7%89%B9%E7%A7%8D%E5%8A%B3%E5%8A%A8%E9%98%B2%E6%8A%A4%E7%94%A8%E5%93%81(%E9%98%B2%E6%8A%A4%E6%9C%8D%E3%80%81%E9%9E%8B)%E3%80%81%E6%9C%BA%E5%8A%A8%E8%BD%A6%E5%8F%91%E5%8A%A8%E6%9C%BA%E5%86%B7%E5%8D%B4%E6%B6%B2%E3%80%81%E6%9C%BA%E5%8A%A8%E8%BD%A6%E8%BE%86%E5%88%B6%E5%8A%A8%E6%B6%B2%E3%80%81%E8%BD%A6%E7%94%A8%E5%B0%BF%E7%B4%A0%E6%B0%B4%E6%BA%B6%E6%B6%B2%E3%80%81%E9%93%9D%E5%90%88%E9%87%91%E5%B7%A5%E4%B8%9A%E5%9E%8B%E6%9D%90%E3%80%81%E9%93%9D%E5%8F%8A%E9%93%9D%E5%90%88%E9%87%91%E6%9D%BF%E5%B8%A6%E7%AE%94%E3%80%81%E5%B7%A5%E4%B8%9A%E6%B6%82%E6%96%99%E3%80%81%E6%91%A9%E6%93%A6%E6%9D%90%E6%96%99%E3%80%81%E4%B8%89%E7%9B%B8%E5%BC%82%E6%AD%A5%E7%94%B5%E5%8A%A8%E6%9C%BA%E3%80%81%E7%94%B5%E5%8A%9B%E5%8F%98%E5%8E%8B%E5%99%A8%E3%80%81%E9%92%A2%E5%8D%B7%E5%B0%BA%E3%80%81%E8%9E%BA%E9%92%89%E6%97%8B%E5%85%B7%E3%80%81%E6%89%B3%E6%89%8B%E3%80%81%E7%93%A6%E6%A5%9E%E7%BA%B8%E7%AE%B1%E3%80%81%E4%BD%8E%E5%8E%8B%E6%88%90%E5%A5%97%E5%BC%80%E5%85%B3%E5%8F%8A%E8%AE%BE%E5%A4%87%E7%AD%8919%E7%A7%8D%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E7%9B%91%E7%9D%A3%E6%8A%BD%E6%9F%A5%E3%80%82%E5%85%B1%E6%8A%BD%E6%A0%B7%E6%A3%80%E9%AA%8C%E4%BA%86591%E5%AE%B6%E6%AC%A1%E4%BC%81%E4%B8%9A633%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%EF%BC%8C%E5%8F%91%E7%8E%B027%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC%E3%80%82%20%0A&amp;pics=http%3A%2F%2Fwww.huaxiajianyan.com%2Fimage%2Fwx_logo.png&amp;summary=&quot;%0A%09%C2%A0%20%C2%A0%20%C2%A0%202020%E5%B9%B45%E6%9C%8821%E6%97%A5%EF%BC%8C%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%E7%BD%91%E7%AB%99%E5%8F%91%E5%B8%83%E5%85%B3%E4%BA%8E27%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC%E6%83%85%E5%86%B5%E7%9A%84%E9%80%9A%E5%91%8A%E3%80%82%E6%8D%AE%E9%80%9A%E5%91%8A%EF%BC%8C%E8%BF%91%E6%9C%9F%EF%BC%8C%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%E5%AE%8C%E6%88%90%E4%BA%86%E8%BD%A6%E7%94%A8%E6%9F%B4%E6%B2%B9%E3%80%81%E8%BD%A6%E7%94%A8%E4%B9%99%E9%86%87%E6%B1%BD%E6%B2%B9%E3%80%81%E7%A0%82%E8%BD%AE%E3%80%81%E8%BD%AE%E8%83%8E%E3%80%81%E7%89%B9%E7%A7%8D%E5%8A%B3%E5%8A%A8%E9%98%B2%E6%8A%A4%E7%94%A8%E5%93%81(%E9%98%B2%E6%8A%A4%E6%9C%8D%E3%80%81%E9%9E%8B)%E3%80%81%E6%9C%BA%E5%8A%A8%E8%BD%A6%E5%8F%91%E5%8A%A8%E6%9C%BA%E5%86%B7%E5%8D%B4%E6%B6%B2%E3%80%81%E6%9C%BA%E5%8A%A8%E8%BD%A6%E8%BE%86%E5%88%B6%E5%8A%A8%E6%B6%B2%E3%80%81%E8%BD%A6%E7%94%A8%E5%B0%BF%E7%B4%A0%E6%B0%B4%E6%BA%B6%E6%B6%B2%E3%80%81%E9%93%9D%E5%90%88%E9%87%91%E5%B7%A5%E4%B8%9A%E5%9E%8B%E6%9D%90%E3%80%81%E9%93%9D%E5%8F%8A%E9%93%9D%E5%90%88%E9%87%91%E6%9D%BF%E5%B8%A6%E7%AE%94%E3%80%81%E5%B7%A5%E4%B8%9A%E6%B6%82%E6%96%99%E3%80%81%E6%91%A9%E6%93%A6%E6%9D%90%E6%96%99%E3%80%81%E4%B8%89%E7%9B%B8%E5%BC%82%E6%AD%A5%E7%94%B5%E5%8A%A8%E6%9C%BA%E3%80%81%E7%94%B5%E5%8A%9B%E5%8F%98%E5%8E%8B%E5%99%A8%E3%80%81%E9%92%A2%E5%8D%B7%E5%B0%BA%E3%80%81%E8%9E%BA%E9%92%89%E6%97%8B%E5%85%B7%E3%80%81%E6%89%B3%E6%89%8B%E3%80%81%E7%93%A6%E6%A5%9E%E7%BA%B8%E7%AE%B1%E3%80%81%E4%BD%8E%E5%8E%8B%E6%88%90%E5%A5%97%E5%BC%80%E5%85%B3%E5%8F%8A%E8%AE%BE%E5%A4%87%E7%AD%8919%E7%A7%8D%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E7%9B%91%E7%9D%A3%E6%8A%BD%E6%9F%A5%E3%80%82%E5%85%B1%E6%8A%BD%E6%A0%B7%E6%A3%80%E9%AA%8C%E4%BA%86591%E5%AE%B6%E6%AC%A1%E4%BC%81%E4%B8%9A633%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%EF%BC%8C%E5%8F%91%E7%8E%B027%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC%E3%80%82%20%0A&quot;" target="_blank"></a><a class="social-share-icon icon-weibo" href="https://service.weibo.com/share/share.php?url=http%3A%2F%2Fwww.huaxiajianyan.com%2Fnews.php%3Faid%3D1439&amp;title=%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%EF%BC%9A%E8%BD%A6%E7%94%A8%E6%9F%B4%E6%B2%B9%E7%AD%8927%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC&#45;&#45;%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF&amp;pic=http%3A%2F%2Fwww.huaxiajianyan.com%2Fimage%2Fwx_logo.png&amp;appkey=" target="_blank"></a><a class="social-share-icon icon-wechat" href="javascript:"><div class="wechat-qrcode"><h4>微信扫一扫：分享</h4><div class="qrcode" title="http://www.huaxiajianyan.com/news.php?aid=1439"><canvas width="100" height="100" style="display: none;"></canvas><img alt="Scan me!" src="data:image/png;base64,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" style="display: block;"></div><div class="help"><p>微信里点“发现”，扫一下</p><p>二维码便可将本文分享至朋友圈。</p></div></div></a><a class="social-share-icon icon-douban" href="http://shuo.douban.com/!service/share?href=http%3A%2F%2Fwww.huaxiajianyan.com%2Fnews.php%3Faid%3D1439&amp;name=%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%EF%BC%9A%E8%BD%A6%E7%94%A8%E6%9F%B4%E6%B2%B9%E7%AD%8927%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC&#45;&#45;%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF&amp;text=%0A%09%C2%A0%20%C2%A0%20%C2%A0%202020%E5%B9%B45%E6%9C%8821%E6%97%A5%EF%BC%8C%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%E7%BD%91%E7%AB%99%E5%8F%91%E5%B8%83%E5%85%B3%E4%BA%8E27%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC%E6%83%85%E5%86%B5%E7%9A%84%E9%80%9A%E5%91%8A%E3%80%82%E6%8D%AE%E9%80%9A%E5%91%8A%EF%BC%8C%E8%BF%91%E6%9C%9F%EF%BC%8C%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%E5%AE%8C%E6%88%90%E4%BA%86%E8%BD%A6%E7%94%A8%E6%9F%B4%E6%B2%B9%E3%80%81%E8%BD%A6%E7%94%A8%E4%B9%99%E9%86%87%E6%B1%BD%E6%B2%B9%E3%80%81%E7%A0%82%E8%BD%AE%E3%80%81%E8%BD%AE%E8%83%8E%E3%80%81%E7%89%B9%E7%A7%8D%E5%8A%B3%E5%8A%A8%E9%98%B2%E6%8A%A4%E7%94%A8%E5%93%81(%E9%98%B2%E6%8A%A4%E6%9C%8D%E3%80%81%E9%9E%8B)%E3%80%81%E6%9C%BA%E5%8A%A8%E8%BD%A6%E5%8F%91%E5%8A%A8%E6%9C%BA%E5%86%B7%E5%8D%B4%E6%B6%B2%E3%80%81%E6%9C%BA%E5%8A%A8%E8%BD%A6%E8%BE%86%E5%88%B6%E5%8A%A8%E6%B6%B2%E3%80%81%E8%BD%A6%E7%94%A8%E5%B0%BF%E7%B4%A0%E6%B0%B4%E6%BA%B6%E6%B6%B2%E3%80%81%E9%93%9D%E5%90%88%E9%87%91%E5%B7%A5%E4%B8%9A%E5%9E%8B%E6%9D%90%E3%80%81%E9%93%9D%E5%8F%8A%E9%93%9D%E5%90%88%E9%87%91%E6%9D%BF%E5%B8%A6%E7%AE%94%E3%80%81%E5%B7%A5%E4%B8%9A%E6%B6%82%E6%96%99%E3%80%81%E6%91%A9%E6%93%A6%E6%9D%90%E6%96%99%E3%80%81%E4%B8%89%E7%9B%B8%E5%BC%82%E6%AD%A5%E7%94%B5%E5%8A%A8%E6%9C%BA%E3%80%81%E7%94%B5%E5%8A%9B%E5%8F%98%E5%8E%8B%E5%99%A8%E3%80%81%E9%92%A2%E5%8D%B7%E5%B0%BA%E3%80%81%E8%9E%BA%E9%92%89%E6%97%8B%E5%85%B7%E3%80%81%E6%89%B3%E6%89%8B%E3%80%81%E7%93%A6%E6%A5%9E%E7%BA%B8%E7%AE%B1%E3%80%81%E4%BD%8E%E5%8E%8B%E6%88%90%E5%A5%97%E5%BC%80%E5%85%B3%E5%8F%8A%E8%AE%BE%E5%A4%87%E7%AD%8919%E7%A7%8D%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E7%9B%91%E7%9D%A3%E6%8A%BD%E6%9F%A5%E3%80%82%E5%85%B1%E6%8A%BD%E6%A0%B7%E6%A3%80%E9%AA%8C%E4%BA%86591%E5%AE%B6%E6%AC%A1%E4%BC%81%E4%B8%9A633%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%EF%BC%8C%E5%8F%91%E7%8E%B027%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC%E3%80%82%20%0A&amp;image=http%3A%2F%2Fwww.huaxiajianyan.com%2Fimage%2Fwx_logo.png&amp;starid=0&amp;aid=0&amp;style=11" target="_blank"></a><a class="social-share-icon icon-qzone" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http%3A%2F%2Fwww.huaxiajianyan.com%2Fnews.php%3Faid%3D1439&amp;title=%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%EF%BC%9A%E8%BD%A6%E7%94%A8%E6%9F%B4%E6%B2%B9%E7%AD%8927%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC&#45;&#45;%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF&amp;desc=%0A%09%C2%A0%20%C2%A0%20%C2%A0%202020%E5%B9%B45%E6%9C%8821%E6%97%A5%EF%BC%8C%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%E7%BD%91%E7%AB%99%E5%8F%91%E5%B8%83%E5%85%B3%E4%BA%8E27%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC%E6%83%85%E5%86%B5%E7%9A%84%E9%80%9A%E5%91%8A%E3%80%82%E6%8D%AE%E9%80%9A%E5%91%8A%EF%BC%8C%E8%BF%91%E6%9C%9F%EF%BC%8C%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%E5%AE%8C%E6%88%90%E4%BA%86%E8%BD%A6%E7%94%A8%E6%9F%B4%E6%B2%B9%E3%80%81%E8%BD%A6%E7%94%A8%E4%B9%99%E9%86%87%E6%B1%BD%E6%B2%B9%E3%80%81%E7%A0%82%E8%BD%AE%E3%80%81%E8%BD%AE%E8%83%8E%E3%80%81%E7%89%B9%E7%A7%8D%E5%8A%B3%E5%8A%A8%E9%98%B2%E6%8A%A4%E7%94%A8%E5%93%81(%E9%98%B2%E6%8A%A4%E6%9C%8D%E3%80%81%E9%9E%8B)%E3%80%81%E6%9C%BA%E5%8A%A8%E8%BD%A6%E5%8F%91%E5%8A%A8%E6%9C%BA%E5%86%B7%E5%8D%B4%E6%B6%B2%E3%80%81%E6%9C%BA%E5%8A%A8%E8%BD%A6%E8%BE%86%E5%88%B6%E5%8A%A8%E6%B6%B2%E3%80%81%E8%BD%A6%E7%94%A8%E5%B0%BF%E7%B4%A0%E6%B0%B4%E6%BA%B6%E6%B6%B2%E3%80%81%E9%93%9D%E5%90%88%E9%87%91%E5%B7%A5%E4%B8%9A%E5%9E%8B%E6%9D%90%E3%80%81%E9%93%9D%E5%8F%8A%E9%93%9D%E5%90%88%E9%87%91%E6%9D%BF%E5%B8%A6%E7%AE%94%E3%80%81%E5%B7%A5%E4%B8%9A%E6%B6%82%E6%96%99%E3%80%81%E6%91%A9%E6%93%A6%E6%9D%90%E6%96%99%E3%80%81%E4%B8%89%E7%9B%B8%E5%BC%82%E6%AD%A5%E7%94%B5%E5%8A%A8%E6%9C%BA%E3%80%81%E7%94%B5%E5%8A%9B%E5%8F%98%E5%8E%8B%E5%99%A8%E3%80%81%E9%92%A2%E5%8D%B7%E5%B0%BA%E3%80%81%E8%9E%BA%E9%92%89%E6%97%8B%E5%85%B7%E3%80%81%E6%89%B3%E6%89%8B%E3%80%81%E7%93%A6%E6%A5%9E%E7%BA%B8%E7%AE%B1%E3%80%81%E4%BD%8E%E5%8E%8B%E6%88%90%E5%A5%97%E5%BC%80%E5%85%B3%E5%8F%8A%E8%AE%BE%E5%A4%87%E7%AD%8919%E7%A7%8D%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E7%9B%91%E7%9D%A3%E6%8A%BD%E6%9F%A5%E3%80%82%E5%85%B1%E6%8A%BD%E6%A0%B7%E6%A3%80%E9%AA%8C%E4%BA%86591%E5%AE%B6%E6%AC%A1%E4%BC%81%E4%B8%9A633%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%EF%BC%8C%E5%8F%91%E7%8E%B027%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC%E3%80%82%20%0A&amp;summary=%0A%09%C2%A0%20%C2%A0%20%C2%A0%202020%E5%B9%B45%E6%9C%8821%E6%97%A5%EF%BC%8C%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%E7%BD%91%E7%AB%99%E5%8F%91%E5%B8%83%E5%85%B3%E4%BA%8E27%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC%E6%83%85%E5%86%B5%E7%9A%84%E9%80%9A%E5%91%8A%E3%80%82%E6%8D%AE%E9%80%9A%E5%91%8A%EF%BC%8C%E8%BF%91%E6%9C%9F%EF%BC%8C%E6%B2%B3%E5%8D%97%E7%9C%81%E5%B8%82%E5%9C%BA%E7%9B%91%E7%9D%A3%E7%AE%A1%E7%90%86%E5%B1%80%E5%AE%8C%E6%88%90%E4%BA%86%E8%BD%A6%E7%94%A8%E6%9F%B4%E6%B2%B9%E3%80%81%E8%BD%A6%E7%94%A8%E4%B9%99%E9%86%87%E6%B1%BD%E6%B2%B9%E3%80%81%E7%A0%82%E8%BD%AE%E3%80%81%E8%BD%AE%E8%83%8E%E3%80%81%E7%89%B9%E7%A7%8D%E5%8A%B3%E5%8A%A8%E9%98%B2%E6%8A%A4%E7%94%A8%E5%93%81(%E9%98%B2%E6%8A%A4%E6%9C%8D%E3%80%81%E9%9E%8B)%E3%80%81%E6%9C%BA%E5%8A%A8%E8%BD%A6%E5%8F%91%E5%8A%A8%E6%9C%BA%E5%86%B7%E5%8D%B4%E6%B6%B2%E3%80%81%E6%9C%BA%E5%8A%A8%E8%BD%A6%E8%BE%86%E5%88%B6%E5%8A%A8%E6%B6%B2%E3%80%81%E8%BD%A6%E7%94%A8%E5%B0%BF%E7%B4%A0%E6%B0%B4%E6%BA%B6%E6%B6%B2%E3%80%81%E9%93%9D%E5%90%88%E9%87%91%E5%B7%A5%E4%B8%9A%E5%9E%8B%E6%9D%90%E3%80%81%E9%93%9D%E5%8F%8A%E9%93%9D%E5%90%88%E9%87%91%E6%9D%BF%E5%B8%A6%E7%AE%94%E3%80%81%E5%B7%A5%E4%B8%9A%E6%B6%82%E6%96%99%E3%80%81%E6%91%A9%E6%93%A6%E6%9D%90%E6%96%99%E3%80%81%E4%B8%89%E7%9B%B8%E5%BC%82%E6%AD%A5%E7%94%B5%E5%8A%A8%E6%9C%BA%E3%80%81%E7%94%B5%E5%8A%9B%E5%8F%98%E5%8E%8B%E5%99%A8%E3%80%81%E9%92%A2%E5%8D%B7%E5%B0%BA%E3%80%81%E8%9E%BA%E9%92%89%E6%97%8B%E5%85%B7%E3%80%81%E6%89%B3%E6%89%8B%E3%80%81%E7%93%A6%E6%A5%9E%E7%BA%B8%E7%AE%B1%E3%80%81%E4%BD%8E%E5%8E%8B%E6%88%90%E5%A5%97%E5%BC%80%E5%85%B3%E5%8F%8A%E8%AE%BE%E5%A4%87%E7%AD%8919%E7%A7%8D%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E7%9B%91%E7%9D%A3%E6%8A%BD%E6%9F%A5%E3%80%82%E5%85%B1%E6%8A%BD%E6%A0%B7%E6%A3%80%E9%AA%8C%E4%BA%86591%E5%AE%B6%E6%AC%A1%E4%BC%81%E4%B8%9A633%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%EF%BC%8C%E5%8F%91%E7%8E%B027%E6%89%B9%E6%AC%A1%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E4%B8%8D%E5%90%88%E6%A0%BC%E3%80%82%20%0A&amp;site=%E5%8D%8E%E5%A4%8F%E6%A3%80%E9%AA%8C%E6%A3%80%E6%B5%8B%E7%BD%91&amp;pics=http%3A%2F%2Fwww.huaxiajianyan.com%2Fimage%2Fwx_logo.png" target="_blank"></a></div>-->
+                <p></p>
+                <!--<br>-->
+                <div class="articlecontent" id="articlecontent">
+                    {volist name="content" id="vo" key="key"}
+                    <p style="color:#000000;font-family:宋体,黑体,Arial;font-size:16px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:15px;orphans:2;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;text-align:left;text-decoration:none;text-indent:-35px;text-transform:none;-webkit-text-stroke-width:0px;white-space:normal;word-spacing:0px;">
+                        <span style="font-size:14px;font-family:" "="">&nbsp; &nbsp; &nbsp; {$vo|raw}</span>
+                    </p>
+                    <p>
+                        <span style="font:14px/25px 宋体,黑体,Arial;text-align:left;color:#000000;text-transform:none;text-indent:0px;letter-spacing:normal;text-decoration:none;word-spacing:0px;display:inline !important;orphans:2;font-size-adjust:none;font-stretch:normal;float:none;-webkit-text-stroke-width:0px;background-color:#FFFFFF;"></span>
+                    </p>
+                    {/volist}
+                    <p>
+                        <br>
+                    </p>
+                </div>
+
+                <h3 id="c041301" style="color:#494747;font-size:15px" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本文已结束</h3>
+                <hr align="center" width="300" color="#494747" size="1">
+                <div class="articlecontent">
+                    <a href="{:url('index/news')}" style="font-size:15px;cursor:pointer;" target="_self"><em>返回首页</em><br>
+
+                    </a></div><span id="index_logbtn" style="font-size:15px;cursor:pointer;" target="_blank">
+            </span></div><a id="index_logbtn" style="font-size:15px;cursor:pointer;" target="_blank">
+            <script>
+                $(".mid .downclick").click(function(e) {
+                    //下载次数
+                    var tdid = 1439;
+                    $.post("ajax.php",{action:"downnoadd",aid:tdid},function(res){
+                        var obj = eval('(' + res + ')');
+                        if(obj.status == 0){
+                            swal(obj.info,"","error");
+                        }else{
+                            swal(obj.info,"","success");
+                        }
+                    });
+                });
+            </script>
+            <script>
+                var $share2config = {
+
+                    description: $('.articlecontent').children().first().text(),
+                };
+                socialShare('.social-share', $share2config);
+                window._bd_share_config = {
+                    "common": {
+                        "bdSnsKey": {},
+                        "bdText": $('#artTitle').text()+"--华夏检验检测网",
+                        "bdMini": "2",
+                        "bdPic": "http://www.huaxiajianyan.com/image/wx_logo.png",
+                        "bdStyle": "0",
+                        "bdSize": "24",
+                    },
+                    "share": {},
+                    "image": {
+                        "viewList": ["sqq","qzone", "tsina", "weixin"],
+                        "viewText": "分享到：",
+                        "viewSize": "16"
+                    },
+                    "selectShare": {
+                        "bdContainerClass": null,
+                        "bdSelectMiniList": ["sqq","qzone", "tsina", "weixin"]
+                    }
+                };
+            </script>
+        </a><div class="col3" style="padding-left:20px"><a id="index_logbtn" style="font-size:15px;cursor:pointer;" target="_blank">
+        </a><div class="swiper-container detailnewsfocus"><a id="index_logbtn" style="font-size:15px;cursor:pointer;" target="_blank">
+        </a><div class="swiper-wrapper"><a id="index_logbtn" style="font-size:15px;cursor:pointer;" target="_blank">
+        </a><div class="swiper-slide"><a id="index_logbtn" style="height:auto;font-size:15px;cursor:pointer;" target="_blank">
+        </a><a target="_blank" href="{:url('article/detail',['id'=>$ad_module.id])}">
+            <img src="{$ad_module.head_image}" class="w100">
+            <em>
+                {$ad_module.title}                                  </em>
+        </a>
+        </div>
+        </div>
+        </div>
+            <br>
+            <ul class="newstablist" style="background-color: #f8f8f7">
+                <img src="__STATIC__/pic/icon_hot.png">
+                <hr>
+                {volist name="viewCountRank" key="key" id="vo"}
+                <li><a href="{:url('article/detail',['id'=>$vo.id])}" target="_blank"><em {if $key <= 3}class="topnewshead"{/if}>{$key}</em>{$vo.title}</a></li>
+                <hr size="3" color="white">
+                {/volist}
+            </ul>
+            <br>
+            <div class="swiper-container rightnewsfocus">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a target="_blank">
+                            <img src="http://img.huaxiajianyan.com/Picture/2020-05-16/5ebf6cd1a991d.jpg">
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <ul class="newstablist" style="background-color: #f8f8f7">
+                <img src="__STATIC__/pic/icon_rec.png">
+                <hr>
+                {volist name="categoryViewCountRank" key="key" id="vo"}
+                <li><a href="{:url('article/detail',['id'=>$vo.id])}" target="_blank">【{$vo.category|getCategoryStr}】{$vo.title}</a></li>
+                <hr size="3" color="white">
+                {/volist}
+            </ul>
+        </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script>
+        wx.config({
+            debug: false,
+            appId: 'wxee49936fdf97beb3',
+            timestamp: 1590456961,
+            nonceStr: 'ruzh7QOJdYrr0yfS',
+            signature: 'c72d34d0d2cdd4aaf13c17e33f99a027678b0961',
+            jsApiList: [
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage'
+            ]
+        });
+        wx.ready(function(){
+            wx.onMenuShareAppMessage({
+                title: '河南省市场监督管理局：车用柴油等27批次产品质量不合格',
+                desc: $('#articlecontent').text(),
+                link: "",
+                imgUrl: "http://www.huaxiajianyan.com/image/wx_logo.png",
+                success: function(res){}
+            });
+            wx.onMenuShareTimeline({
+                title: '河南省市场监督管理局：车用柴油等27批次产品质量不合格',
+                desc: $('#articlecontent').text(),
+                link: "",
+                imgUrl: "http://www.huaxiajianyan.com/image/wx_logo.png",
+                success: function(res){}
+            });
+        });
+    </script>
+</div>
+{include file="public/footer" /}

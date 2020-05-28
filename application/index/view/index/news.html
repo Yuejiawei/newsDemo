@@ -1,0 +1,194 @@
+{include file="public/header" /}
+            <div class="webaddress">
+                当前位置：<a href="{:url('index/news')}">首页</a><span class="ficon icon-uniE6E8"></span><a href="{:url('index/news')}">新闻资讯</a>
+                <a href="javascript:;" id="index_logbtn1" class="addpublic">我要发布</a>
+
+
+            </div>
+            <div class="mid">
+                <div class="col6">
+                    <div class="swiper-container newsfocus swiper-container-horizontal">
+                        <div class="swiper-wrapper" style="transform: translate3d(-4320px, 0px, 0px); transition-duration: 300ms;">
+                            {volist name="topRotation" key="key" id="vo"}
+                            <div class="swiper-slide" data-swiper-slide-index="{$key}" style="width: 720px;">
+                            <a target="_blank" href="{:url('article/detail',['id'=>$vo.id])}" class="w100">
+
+
+                                <img alt="图片不存在哦" src="{$vo.head_image}">
+
+                                <em>
+                                    {$vo.title}                                    </em>
+                            </a>
+                        </div>
+                            {/volist}
+                           </div>
+
+                    </div>
+                    <script type="text/javascript">
+                        $(function(){
+                            var swiper = new Swiper('.newsfocus', {
+                                loop : true,
+                                autoplay:12000
+                            });
+                        });
+                    </script>
+                </div>
+
+                <div class="col4 newsflow">
+                    <div class="newstop">
+                        <h4 id="c041301">曝光台</h4><a href="{:url('article/more_article',['cid'=>0])}" target="_blank" alt="更多">更多...</a>
+                    </div>
+                    <div class="newstop2" style="height:0">
+
+
+                    </div>
+                    <ul class="newstablist">
+                        {volist name="exposeData" key="key" id="vo"}
+                        <li><a href="{:url('article/detail',['id'=>$vo.id])}" target="_blank"><em>{$key}</em>{$vo.title}</a></li>
+                        {/volist}
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <style>
+                #tempad a{
+                    height:300px;
+                }
+                #tempad a img{
+                    height:300px;
+                }
+                .center{
+                    margin:0 35px;
+                }
+            </style>
+            <div class="mid">
+                <div class="col3">
+                    <div class="newstop">
+                        <h4>文件发布</h4>
+                        <a href="{:url('article/more_article',['cid'=>1])}" target="_blank" alt="更多">更多...</a>
+                    </div>
+                    <div class="fnews">
+                        <a href="{:url('article/detail',['id'=>$PublishViewCountMaxId])}" target="_blank">
+                            <img src="http://img.huaxiajianyan.com/Picture/2019-10-29/5db79540492ca.jpg" class="w100">
+                            <em>{$PublishViewCountMaxTitle}</em>
+                        </a>
+                    </div>
+                    <ul class="newstablist">
+                        {volist name="publisherFile" key="key" id="vo"}
+                        <li><a href="{:url('article/detail',['id'=>$vo.id])}" target="_blank">{$vo.title}</a></li>
+                        {/volist}
+                    </ul>
+                </div>
+                <style>
+                    .addpublic{
+                        position: absolute!important;
+                        top: 0;
+                        right: 0;
+                        line-height: 25px!important;
+                        width:80px;
+                        /*border-radius:5px;*/
+                        text-align:center;
+                        display: block;
+                        background-color:#11669f;
+                        color: white;
+                        font-size:14px;
+                    }
+                </style>
+                <div class="col3 center">
+                    <div class="newstop">
+                        <h4>企业公示</h4>
+
+                        <a href="{:url('article/more_article',['cid'=>2])}" target="_blank" alt="更多">更多...</a>
+                    </div>
+                    <div class="fnews">
+                        <a href="{:url('article/detail',['id'=>$AnnounceViewCountMaxId])}" target="_blank">
+                            <img src="http://img.huaxiajianyan.com/Picture/2020-02-14/5e466c77d2dae.jpg" class="w100">
+                            <em>{$AnnounceViewCountMaxTitle}</em>
+                        </a>
+                    </div>
+                    <ul class="newstablist">
+                        {volist name="enterpriseAnnounce" key="key" id="vo"}
+                        <li><a href="{:url('article/detail',['id'=>$vo.id])}" target="_blank">{$vo.title}</a></li>
+                        {/volist}
+                    </ul>
+                </div>
+                <div class="col3" style="width:400px">
+                    <div class="fnews" id="tempad">
+                        <a target="_blank">
+                            <img src="http://img.huaxiajianyan.com/Picture/2019-10-29/5db7955e60e41.jpg" class="w100">
+                        </a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="mid">
+                <div class="col12">
+                    <a target="_blank">
+                        <img src="http://img.huaxiajianyan.com/Picture/2020-05-16/5ebf81da141fd.jpg" class="w100">
+                    </a>
+                </div>
+            </div>
+            <div class="mid">
+                <div class="newstop">
+                    <h4>行业资讯</h4>
+                    <a href="{:url('article/more_article',['cid'=>3,'label'=>4])}" target="_blank" alt="更多">更多...</a>
+                </div>
+                <ul class="newstablist" id="hyzx">
+                    {volist name="industrInformation" key="key" id="vo" empty="暂时没有数据"}
+                    <li><a href="{:url('article/detail',['id'=>$vo.id])}" target="_blank"><i>{$vo.label|getLabel}</i>{$vo.title}</a></li>
+                    {/volist}
+                </ul>
+            </div>
+            <div class="mid">
+                <div class="col6 right5">
+                    <div class="newstop2">
+                        <h4>会议展览</h4>
+                        <a href="{:url('article/more_article',['cid'=>4])}" target="_blank" alt="更多">更多...</a>
+                    </div>
+                    <ul class="newstablist">
+                        {volist name="conferenceAndExhibition" key="key" id="vo"}
+                        <li><a href="{:url('article/detail',['id'=>$vo.id])}" target="_blank">{$vo.title}<span>{$vo.time|date="Y-m-d"}</span></a></li>
+                        {/volist}
+                    </ul>
+                </div>
+                <div class="col4 left5" style="width:480px;height:290px">
+                    <a href="{:url('index/news')}" target="_self" class="picnews">
+                        <img src="http://img.huaxiajianyan.com/Picture/2019-10-29/5db7991cb1fd3.jpg" class="w100">
+                        <!--<em>新闻资讯右下角</em>-->
+                    </a>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+            <script>
+                wx.config({
+                    debug: false,
+                    appId: 'wxee49936fdf97beb3',
+                    timestamp: 1590066036,
+                    nonceStr: 'COB9gYOHOV6O9lnN',
+                    signature: 'a09d5b4ef2c49cc28ad264ca475a77ca39e554a2',
+                    jsApiList: [
+                        'onMenuShareTimeline',
+                        'onMenuShareAppMessage'
+                    ]
+                });
+                wx.ready(function(){
+                    wx.onMenuShareAppMessage({
+                        title: '',
+                        desc: $('#articlecontent').text(),
+                        link: "",
+                        imgUrl: "http://www.huaxiajianyan.com/image/wx_logo.png",
+                        success: function(res){}
+                    });
+                    wx.onMenuShareTimeline({
+                        title: '',
+                        desc: $('#articlecontent').text(),
+                        link: "",
+                        imgUrl: "http://www.huaxiajianyan.com/image/wx_logo.png",
+                        success: function(res){}
+                    });
+                });
+            </script>
+        </div>
+{include file="public/footer" /}
